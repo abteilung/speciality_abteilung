@@ -41,10 +41,10 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['textfile_ext'] = 'txt,html,htm,css,tmpl,js,s
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['enableDeprecationLog'] = '0';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['syslogErrorReporting'] = '0';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['belogErrorReporting'] = '0';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '192.168.*,127.0.0.1,195.202.202.110,195.202.254.44'; // Ecodev: 195.202.254.44, Marc: 195.202.202.110
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '127.0.0.1,31.171.251.42'; // web1 31.171.251.42
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = 1;
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = '2';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['errorHandler'] = 't3lib_error_ErrorHandler';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['errorHandler'] = 'TYPO3\CMS\Core\Error\ErrorHandler';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = '2';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLog'] = 'error_log,,2;syslog,LOCAL0,,3';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['enable_errorDLOG'] = '0';
@@ -76,13 +76,21 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['curlUse'] = '1';
 
 // Add configuration for Development Context
 if (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopment()) {
-	$GLOBALS['TYPO3_CONF_VARS']['BE']['debug'] = '1';
-	$GLOBALS['TYPO3_CONF_VARS']['FE']['debug'] = '1';
+	$GLOBALS['TYPO3_CONF_VARS']['BE']['debug'] = true;
+	$GLOBALS['TYPO3_CONF_VARS']['FE']['debug'] = true;
 	$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '*';
 	$GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = '1';
 	$GLOBALS['TYPO3_CONF_VARS']['SYS']['enableDeprecationLog'] = 'file';
 	$GLOBALS['TYPO3_CONF_VARS']['SYS']['sqlDebug'] = '1';
 	$GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = '0';
 	#$GLOBALS['TYPO3_CONF_VARS']['SYS']['exceptionalErrors'] = '28674';
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['clearCacheSystem'] = '1';
+}
+
+if ((string)\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext() === 'Development/Fabien') {
+	$GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] = 'fabien@ecodev.ch';
+
+	$GLOBALS['TYPO3_CONF_VARS']['GFX']["im"] = '1';
+	$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/local/bin/';
+	$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/local/bin/';
+	$GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'gm';
 }
