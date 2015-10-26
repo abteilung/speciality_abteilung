@@ -29,7 +29,6 @@ $GLOBALS['TYPO3_CONF_VARS']['FE']['permalogin'] = '1';
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['png_truecolor'] = '1';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['USdateFormat'] = '0';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['ddmmyy'] = 'd.m.Y';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = '2';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['hhmm'] = 'g:i a';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['loginCopyrightShowVersion'] = '1';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['maxFileNameLength'] = '255';
