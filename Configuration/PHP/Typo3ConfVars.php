@@ -1,6 +1,6 @@
 <?php
-if (!defined ('TYPO3_MODE')) {
-	die ('Access denied.');
+if (!defined('TYPO3_MODE')) {
+    die ('Access denied.');
 }
 
 // Add some more prefix table for the live search (the top right search)
@@ -75,21 +75,21 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['curlUse'] = '1';
 
 // Add configuration for Development Context
 if (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopment()) {
-	$GLOBALS['TYPO3_CONF_VARS']['BE']['debug'] = true;
-	$GLOBALS['TYPO3_CONF_VARS']['FE']['debug'] = true;
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '*';
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = '1';
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['enableDeprecationLog'] = 'file';
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['sqlDebug'] = '1';
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = '0';
-	#$GLOBALS['TYPO3_CONF_VARS']['SYS']['exceptionalErrors'] = '28674';
+    $GLOBALS['TYPO3_CONF_VARS']['BE']['debug'] = true;
+    $GLOBALS['TYPO3_CONF_VARS']['FE']['debug'] = true;
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '*';
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = '1';
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['enableDeprecationLog'] = 'file';
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['sqlDebug'] = '1';
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = '0';
+    #$GLOBALS['TYPO3_CONF_VARS']['SYS']['exceptionalErrors'] = '28674';
 }
 
 if ((string)\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext() === 'Development/Fabien') {
-	$GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] = 'fabien@ecodev.ch';
+    $GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] = 'fabien@ecodev.ch';
 
-	$GLOBALS['TYPO3_CONF_VARS']['GFX']["im"] = '1';
-	$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/local/bin/';
-	$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/local/bin/';
-	$GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'gm';
+    $GLOBALS['TYPO3_CONF_VARS']['GFX']["im"] = '1';
+    $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/local/bin/';
+    $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/local/bin/';
+    $GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'gm';
 }
