@@ -62,8 +62,8 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['loginCopyrightWarrantyURL'] = 'http://www.ec
 
 // graphics settings
 $GLOBALS['TYPO3_CONF_VARS']['GFX']["im"] = '1';
-$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/bin/';
-$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/bin/';
+$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/share/php/bin/';
+$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/share/php/bin/';
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['TTFdpi'] = '96';
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'gm';
 $GLOBALS['TYPO3_CONF_VARS']["GFX"]["im_v5effects"] = '-1';
