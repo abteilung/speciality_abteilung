@@ -92,4 +92,11 @@ if ((string)\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext() === 
     $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/local/bin/';
     $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/local/bin/';
     $GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'gm';
+} elseif ((string)\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext() === 'Development/Fiacre') {
+    $GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] = 'fiacre@ecodev.ch';
+
+    $GLOBALS['TYPO3_CONF_VARS']['GFX']["im"] = '1';
+    $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/local/bin/';
+    $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/local/bin/';
+    $GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'gm';
 }
