@@ -87,16 +87,28 @@ if (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopme
 
 if ((string)\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext() === 'Development/Fabien') {
     $GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] = 'fabien@ecodev.ch';
+    $GLOBALS['TYPO3_CONF_VARS']['MAIL']['development_redirect_to'] = 'fabien@ecodev.ch';
 
     $GLOBALS['TYPO3_CONF_VARS']['GFX']["im"] = '1';
     $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/local/bin/';
     $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/local/bin/';
     $GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'gm';
+
 } elseif ((string)\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext() === 'Development/Fiacre') {
     $GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] = 'fiacre@ecodev.ch';
+    $GLOBALS['TYPO3_CONF_VARS']['MAIL']['development_redirect_to'] = 'fiacre@ecodev.ch';
 
     $GLOBALS['TYPO3_CONF_VARS']['GFX']["im"] = '1';
     $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/local/bin/';
     $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/local/bin/';
     $GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'gm';
+
+} elseif ((string)\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext() === 'Development/Marc') {
+    $GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] = 'marc@ecodev.ch';
+    $GLOBALS['TYPO3_CONF_VARS']['MAIL']['development_redirect_to'] = 'marc@ecodev.ch';
+
+    #$GLOBALS['TYPO3_CONF_VARS']['GFX']["im"] = '1';
+    #$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/local/bin/';
+    #$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/local/bin/';
+    #$GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'gm';
 }
