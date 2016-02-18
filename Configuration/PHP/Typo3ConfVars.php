@@ -40,7 +40,7 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['textfile_ext'] = 'txt,html,htm,css,tmpl,js,s
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['enableDeprecationLog'] = '0';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['syslogErrorReporting'] = '0';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['belogErrorReporting'] = '0';
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '127.0.0.1,31.171.251.42'; // web1 31.171.251.42
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '127.0.0.1'; // web1 31.171.251.42
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = 1;
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = '2';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['errorHandler'] = 'TYPO3\CMS\Core\Error\ErrorHandler';
@@ -52,7 +52,7 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['errorHandlerErrors'] = 0;
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['exceptionalErrors'] = 0;
 
 // MLC modify as needed for file and directory permissions
-$GLOBALS['TYPO3_CONF_VARS']['BE']['fileCreateMask'] = '0664';
+$GLOBALS['TYPO3_CONF_VARS']['BE']['fileCreateMask'] = '0644';
 $GLOBALS['TYPO3_CONF_VARS']['BE']['folderCreateMask'] = '0775';
 
 // company support details
@@ -62,10 +62,10 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['loginCopyrightWarrantyURL'] = 'https://abtei
 
 // graphics settings
 $GLOBALS['TYPO3_CONF_VARS']['GFX']["im"] = '1';
-$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/local/php/bin/';
-$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/local/php/bin/';
+$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/bin/';
+$GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/bin/';
 $GLOBALS['TYPO3_CONF_VARS']['GFX']['TTFdpi'] = '96';
-$GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'gm';
+$GLOBALS['TYPO3_CONF_VARS']['GFX']['im_version_5'] = 'im6';
 $GLOBALS['TYPO3_CONF_VARS']["GFX"]["im_v5effects"] = '-1';
 
 #curl and filepath helpers
@@ -75,6 +75,8 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['curlUse'] = '1';
 
 // Add configuration for Development Context
 if (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopment()) {
+    $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path"] = '/usr/local/bin/';
+    $GLOBALS['TYPO3_CONF_VARS']['GFX']["im_path_lzw"] = '/usr/local/bin/';
     $GLOBALS['TYPO3_CONF_VARS']['BE']['debug'] = true;
     $GLOBALS['TYPO3_CONF_VARS']['FE']['debug'] = true;
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '*';
