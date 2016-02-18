@@ -1,6 +1,9 @@
 # Speciality Ecodev
 
-TYPO3 extension to ship common configuration specific to Ecodev.
+TYPO3 extension to ship common configuration specific to abteilung.
+
+Please refer to Ecodev's Version for original reference.
+https://github.com/Ecodev/speciality_ecodev.git
 
 Add into `AdditionalConfiguration.php` something like:
 
