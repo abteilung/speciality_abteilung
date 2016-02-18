@@ -1,7 +1,7 @@
 {
-	"name": "ecodev/speciality-ecodev",
+	"name": "abteilung/speciality-abteilung",
 	"type": "typo3-cms-extension",
-	"description": "TYPO3 extension to ship common configuration specific to Ecodev",
+	"description": "TYPO3 extension to ship common configuration specific to abteilung.ch",
 	"homepage": "https://github.com/Ecodev/speciality.git",
 	"license": ["GPL-2.0+"]
 }
