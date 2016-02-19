@@ -41,7 +41,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['enableDeprecationLog'] = '0';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['syslogErrorReporting'] = '0';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['belogErrorReporting'] = '0';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '127.0.0.1'; // web1 31.171.251.42
-$GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = 1;
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = '2';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['errorHandler'] = 'TYPO3\CMS\Core\Error\ErrorHandler';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = '2';
@@ -52,11 +51,11 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['errorHandlerErrors'] = 0;
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['exceptionalErrors'] = 0;
 
 // MLC modify as needed for file and directory permissions
-$GLOBALS['TYPO3_CONF_VARS']['BE']['fileCreateMask'] = '0644';
+$GLOBALS['TYPO3_CONF_VARS']['BE']['fileCreateMask'] = '0664';
 $GLOBALS['TYPO3_CONF_VARS']['BE']['folderCreateMask'] = '0775';
 
 // company support details
-$GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] = 'kontakt@abteilung.ch';
+$GLOBALS['TYPO3_CONF_VARS']['BE']['warning_email_addr'] = '';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['loginCopyrightWarrantyProvider'] = 'Abteilung für Gestaltung GmbH';
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['loginCopyrightWarrantyURL'] = 'https://abteilung.ch/';
 
@@ -80,10 +79,10 @@ if (\TYPO3\CMS\Core\Utility\GeneralUtility::getApplicationContext()->isDevelopme
     $GLOBALS['TYPO3_CONF_VARS']['BE']['debug'] = true;
     $GLOBALS['TYPO3_CONF_VARS']['FE']['debug'] = true;
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] = '*';
-    $GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = '1';
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['displayErrors'] = '0';
     $GLOBALS['TYPO3_CONF_VARS']['SYS']['enableDeprecationLog'] = 'file';
-    $GLOBALS['TYPO3_CONF_VARS']['SYS']['sqlDebug'] = '1';
-    $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = '0';
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['sqlDebug'] = '0';
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLogLevel'] = '3';
     #$GLOBALS['TYPO3_CONF_VARS']['SYS']['exceptionalErrors'] = '28674';
 }
 
